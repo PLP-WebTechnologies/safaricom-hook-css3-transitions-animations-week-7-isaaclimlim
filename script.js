@@ -25,7 +25,11 @@ displayGlobalVar();
 // Function to toggle
 function animateBox() {
     const box = document.querySelector(".animated-box");
-    box.classList.toggle("show");
+    if (box.classList.contains("show")) {
+        box.classList.remove("show");
+    } else {
+        box.classList.add("show");
+    }
 }
 
 const moveBox = document.querySelector("#animate-box-button");
